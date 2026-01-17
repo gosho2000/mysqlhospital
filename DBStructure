@@ -51,3 +51,28 @@ CREATE TABLE IF NOT EXISTS diagnoses (
 		ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS users_diagnoses (
+	user_id INT NOT NULL,
+	diagnoses_id INT NOT NULL,
+	diagnose_date DATETIME DEFAULT NOW(),
+	doctor_id INT NOT NULL,
+
+	CONSTRAINT fk_users
+	FOREIGN KEY (user_id)
+	REFERENCES users (id)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION,
+
+	CONSTRAINT fk_diagnonses
+	FOREIGN KEY (diagnoses_id)
+	REFERENCES diagnoses (id)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION,
+
+	CONSTRAINT fk_doctor
+	FOREIGN KEY (doctor_id)
+	REFERENCES users (id)
+	ON DELETE NO ACTION
+	ON UPDATE NO ACTION
+);
+
