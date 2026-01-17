@@ -1,1 +1,26 @@
-rrr
+
+USE hospital;
+
+/* INSERT INTO roles (role, display_name) VALUES
+("patient", "Patient"),
+("doctor", "Doctor"),
+("admin", "Hospital Administrator"); */
+
+/* INSERT INTO users (username, full_name, role_id) VALUES
+("admin", "Администратор", 3),
+("vankata", "Иван Стоянов Иванов", 1),
+("doctor_house", "ЙОрдан Цончев Иванов", 2); */
+
+/* INSERT INTO diagnostic_categories (code, name, is_top) VALUES
+("J", "Заболявания на дихателната система", true);
+
+INSERT INTO diagnostic_categories (code, name, is_top, parent_id) VALUES
+("J09-J18", "Грип", false, 1);
+
+INSERT INTO diagnostic_categories (code, name, is_top, parent_id) VALUES
+("J12", "Вирусна пневмония, некласифицирана другаде", false, 2);
+
+
+INSERT INTO diagnoses (code, name, category_id) VALUES
+("J12.9", "Вирусна пневмония, неуточнена", 3); */
+
