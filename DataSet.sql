@@ -1,10 +1,10 @@
 
 USE hospital;
 
-/* INSERT INTO roles (role, display_name) VALUES
-("patient", "Patient"),
-("doctor", "Doctor"),
-("admin", "Hospital Administrator"); */
+INSERT INTO roles (id, role, display_name) VALUES
+(1, "patient", "Patient"),
+(2, "doctor", "Doctor"),
+(3, "admin", "Hospital Administrator");
 
 /* INSERT INTO users (username, full_name, role_id) VALUES
 ("admin", "Администратор", 3),
@@ -39,7 +39,7 @@ INSERT INTO diagnoses (code, name, category_id) VALUES
 /* INSERT INTO prescriptions (user_id, related_diagnosis_id, doctor_id) VALUES
 (1, 1, 2); */
 
-DELETE FROM prescriptions;
+/* DELETE FROM prescriptions;
 
 DELETE FROM users_diagnoses;
 
@@ -51,7 +51,7 @@ DELETE FROM drugs_categories;
 
 DELETE FROM drugs;
 
-DELETE FROM users;
+DELETE FROM users; */
 
 
 INSERT INTO users (id, username, full_name, role_id) VALUES

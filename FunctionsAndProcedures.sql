@@ -5,8 +5,8 @@ USE hospital;
 
 DELIMITER $$
 
-DROP FUNCTION get_drug_category_path;
-DROP PROCEDURE get_drug_category_path_with_codes;
+-- DROP FUNCTION get_drug_category_path;
+-- DROP PROCEDURE get_drug_category_path_with_codes;
 
 CREATE FUNCTION IF NOT EXISTS get_drug_category_path(drugId INT) 
 RETURNS VARCHAR(255)
