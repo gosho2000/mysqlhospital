@@ -5,9 +5,6 @@ USE hospital;
 
 DELIMITER $$
 
--- DROP FUNCTION get_drug_category_path;
--- DROP PROCEDURE get_drug_category_path_with_codes;
-
 CREATE FUNCTION IF NOT EXISTS get_drug_category_path(drugId INT) 
 RETURNS VARCHAR(255)
 DETERMINISTIC
@@ -34,7 +31,6 @@ END$$
 CREATE PROCEDURE IF NOT EXISTS get_drug_category_path_with_codes(IN drugId INT)
 BEGIN
     WITH RECURSIVE category_hierarchy AS (
-        -- Start with the drug's category
         SELECT 
             dc.id,
             dc.code,
@@ -46,7 +42,6 @@ BEGIN
 
         UNION ALL
 
-        -- Climb to parent categories
         SELECT 
             parent.id,
             parent.code,

@@ -39,21 +39,6 @@ INSERT INTO diagnoses (code, name, category_id) VALUES
 /* INSERT INTO prescriptions (user_id, related_diagnosis_id, doctor_id) VALUES
 (1, 1, 2); */
 
-/* DELETE FROM prescriptions;
-
-DELETE FROM users_diagnoses;
-
-DELETE FROM diagnostic_categories;
-
-DELETE FROM diagnoses;
-
-DELETE FROM drugs_categories;
-
-DELETE FROM drugs;
-
-DELETE FROM users; */
-
-
 INSERT INTO users (id, username, full_name, role_id) VALUES
 (1, 'ivan_petrov', 'Иван Петров Иванов', 1),
 (2, 'georgi_dimitrov', 'Георги Димитров Георгиев', 2),

@@ -39,32 +39,6 @@ SELECT d.id AS "Ид. No", d.code AS "Код", d.name AS "Наименовани
 FROM drugs d
 LEFT JOIN drugs_categories c ON d.category_id = c.id;
 
-/* WITH RECURSIVE category_hierarchy AS (
-	SELECT dc.id AS category_id,
-	       dc.name AS category_name,
-	       dc.parent_id,
-				 d.id AS drug_id,
-				 d.name AS drug_name
-	FROM drugs d
-	JOIN drugs_categories dc ON d.category_id = dc.id
-	WHERE d.id = 1
-
-	UNION ALL
-
-	SELECT parent.id AS category_id,
-	       parent.name AS category_name,
-				 parent.parent_id,
-				 ch.drug_id,
-				 ch.drug_name
-	FROM drugs_categories parent
-	JOIN category_hierarchy ch ON ch.parent_id = parent.id
-)
-SELECT *
-FROM category_hierarchy; */
-
-/* SELECT d.id AS "Ид. No", d.code AS "Код", d.name AS "Наименование",
-       c.code AS "Код категория", c.name AS "Категория" */
-
 -- Справка диагнози
 
 SELECT d.id AS "Ид. No", d.code AS "Код", d.name AS "Наименование",
